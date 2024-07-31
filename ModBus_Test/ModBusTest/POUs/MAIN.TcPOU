@@ -1,21 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="MAIN" Id="{798194bd-2eb4-4ecb-9a48-b0ecad4b7fc9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	b1		:BOOL;
 	i1		:INT;
 	i2		:INT;
+	
+	fbADSRead	:ADSREAD;
+	fbREdge		:R_TRIG;
+	
+	bStart		AT %I* :BOOL;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[FOR i1 := 1 TO 10 BY 1 DO;
 	i2:=i2 + 1;
-END_FOR]]></ST>
+END_FOR
+
+fbADSRead.NETID := '192.168.15.15.1.1';
+fbADSRead.PORT := 10500;
+fbADSRead.IDXGRP  := 16#2000;
+fbADSRead.IDXOFFS := 0;
+
+fbREdge(CLK:=bStart,Q=>);
+
+fbADSRead(
+		READ:=fbREdge.Q
+		);
+]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
       <LineId Id="9" Count="1" />
+      <LineId Id="14" Count="1" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="20" Count="1" />
+      <LineId Id="19" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
