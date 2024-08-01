@@ -28,8 +28,7 @@ fbREdge(CLK:=bStart,Q=>);
 
 fbADSRead(
 		READ:=fbREdge.Q
-		);
-]]></ST>
+		);]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
@@ -42,7 +41,6 @@ fbADSRead(
       <LineId Id="13" Count="0" />
       <LineId Id="11" Count="0" />
       <LineId Id="20" Count="1" />
-      <LineId Id="19" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

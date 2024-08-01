@@ -15,9 +15,16 @@
 		</System>
 		<Plc>
 			<Project GUID="{24CA97DA-4C9B-4709-B647-FC0AEA59A762}" Name="ModBusTest" PrjFilePath="ModBusTest\ModBusTest.plcproj" TmcFilePath="ModBusTest\ModBusTest.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{9A1D4DDA-5CF6-ADD2-00E8-4EB883E95FCF}" TmcPath="ModBusTest\ModBusTest.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="1" TmcHash="{05208DAA-B095-EB76-7272-FC23EA727628}" TmcPath="ModBusTest\ModBusTest.tmc">
 					<Name>ModBusTest Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.bStart</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
 					<Contexts>
 						<Context>
 							<Id>0</Id>

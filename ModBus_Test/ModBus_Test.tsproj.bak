@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.54">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.9">
 	<Project ProjectGUID="{F9A4852D-9A07-4076-A518-1F545868F6A5}" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Licenses>
@@ -15,9 +15,16 @@
 		</System>
 		<Plc>
 			<Project GUID="{24CA97DA-4C9B-4709-B647-FC0AEA59A762}" Name="ModBusTest" PrjFilePath="ModBusTest\ModBusTest.plcproj" TmcFilePath="ModBusTest\ModBusTest.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ModBusTest\ModBusTest.tmc" TmcHash="{E51E7CF2-E49E-B4D4-AA10-7A11D196FD5C}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{05208DAA-B095-EB76-7272-FC23EA727628}" TmcPath="ModBusTest\ModBusTest.tmc">
 					<Name>ModBusTest Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.bStart</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
 					<Contexts>
 						<Context>
 							<Id>0</Id>
